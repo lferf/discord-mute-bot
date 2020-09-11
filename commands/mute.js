@@ -5,7 +5,8 @@ module.exports = {
   execute (message) {
     if (message.member.voice.channel) {
       const channel = message.guild.channels.cache.get(message.member.voice.channel.id);
-      for (const [member] of channel.members) {
+      for (const [memberID, member] of channel.members) {
+        console.log(memberID);
         member.voice.setMute(true);
       }
     }
