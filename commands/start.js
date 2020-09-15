@@ -3,7 +3,7 @@ module.exports = {
   aliases: ['st'],
   description: 'Message with reactions to control the muted status of a voice channel',
   execute (message) {
-    if (message.channel.id === '751467327551176905') {
+    if (message.channel.name === 'mute-bot') {
       message.channel.send('Reacciona con 🤫 para silenciar o con 👻 para que todos hablen')
         .then(response => {
           response.react('🤫');
