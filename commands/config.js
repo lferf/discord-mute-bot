@@ -4,7 +4,7 @@ module.exports = {
   execute (message) {
     message.channel.send('Configurando Hypno...')
       .then(() => {
-        message.guild.createChannel(name, 'mute-bot');
+        message.guild.channels.create('mute-bot', { reason: '' });
       })
       .catch((err) => {
         console.error(err);
